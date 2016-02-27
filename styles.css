@@ -45,7 +45,13 @@ header h2{
 .date{
 	margin-left: 800px;
 }
-
+.start{
+	position: relative;
+	margin-top: 50px;
+	margin-left: 150px;
+	padding: 50px;
+font-size: 40px;
+}
 footer{
 	color:black;
 	bottom: 0px;
