@@ -1,0 +1,22 @@
+
+body {
+	font-family: Helvetica Neue, Arial, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    color: #444;
+    line-height: 1.4;
+}
+
+p, h1, h2, h3, h4, h5, h6, section {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: auto;
+}
