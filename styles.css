@@ -1,6 +1,5 @@
-
 body {
-	font-family: Helvetica Neue, Arial, sans-serif;
+    font-family: Helvetica Neue, Arial, sans-serif;
     font-size: 14px;
     margin: 0;
     color: #444;
@@ -8,14 +7,29 @@ body {
 
 }
 
-p, h1, h2, h3, h4, h5, h6, section {
-	display: block;
-	margin: 0;
-	padding: 0;
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+section {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+	margin: 20px auto;
+	width: 780px;
+	background-color: #fff;
+    min-height: 430px;
+    border-radius: 4px;
 }
 
 .hide {
-	display: none;
+    display: none !important;
 }
 
 .show {
@@ -35,23 +49,24 @@ header{
 header h2{
 	font-size: 12px;
 }
+.startSection {
+	margin-top: 60px;
+	text-align: center;
+}
 .intro{
 	font-size: 12px;
+	padding: 10px 20px;
+	    border-bottom: 1px solid #CCC;
 }
 .intro span{
 	padding: 4px;
 }
 
 .date{
-	margin-left: 800px;
+	display: inline-block;
+	float: right;
 }
-.start{
-	position: relative;
-	margin-top: 50px;
-	margin-left: 150px;
-	padding: 50px;
-font-size: 40px;
-}
+
 footer{
 	color:black;
 	bottom: 0px;
@@ -60,5 +75,53 @@ footer{
 	height: 20px;
 	font-size: 10px;
 	text-align: center;
+    display: auto;
+}
 
+.btn {
+    border: none;
+    color: #ffffff;
+    display: inline-block;
+    float: none;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 39px;
+    outline: none;
+    padding: 6px 40px 6px 40px;
+    text-shadow: none;
+    margin: 20px 0 0 0;
+    width: auto;
+    white-space: nowrap;
+    background-color: #d85f7f;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+	background-color: #ba4564;
+	background-position: 28px -9px;
+}
+
+.start {
+    transition: background-position 0.5s ease;
+    background: #d85f7f url(images/plane.png) no-repeat 14px 9px;
+    padding: 14px 40px 12px 75px;
+}
+
+.bar {
+    border-radius: 0px;
+    background: #01c37b;
+    display: block;
+    height: 10px;
+    width: 100%;
+    -webkit-transition: width 0.5s ease !important;
+    -moz-transition: width 0.5s ease !important;
+    -o-transition: width 0.5s ease !important;
+    transition: width 0.5s ease !important;
+}
+
+.progress {
+    background: #ff1200;
+    height: 10px;
+    padding: 0px;
 }

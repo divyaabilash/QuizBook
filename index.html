@@ -12,43 +12,49 @@
         <h1>Interactive Quiz</h1>
         <h2>Online Assessment Tool</h2>
     </header>
-    <section class="intro">
-        <h2>Today`s Pick is <span id="topic"></span>
-         <span id="date" class="date"></span><h2>
-    </section>
-
-    <div>
-    	<p>
-        <input type="button" class="start" name="start" id="start" value="Start Quiz!"> </p>
+    <div class="progresscontainer hide">
+        <div class="progress" id="timeColor" style="background-color: rgb(255, 248, 71);">
+            <span class="bar" id="timeProgress" style="width: 64.0384%;"></span>
+        </div>
     </div>
-    <div class="hide" id="quizsection" class="quizsection">
-	    <section id="scoreSection" class="hide">
-	    	<h2>Scores</h2>
-        <div class="scoreBlock">
-            <p>
-                <span id="right">0</span>
-                <span>Correct</span>
-            </p>
-            <p>
-                <span id="wrong">0</span>
-                <span>Wrong</span>
-            </p>
-        </div>
-    </section>
-    <section id="questions">
-    	<div id="question">
-    	</div>
+    <div class="main">
+        <section class="intro">
+            <h2>Today`s Pick is <span id="topic"></span>
+         <span id="date" class="date"></span></h2>
+        </section>
         <div>
-            <input type="button" name="start" id="submitAnswer" value="Submit" />
-            <input type="button" name="start" id="next" value="Next Question" />
-            <input type="button" name="quit" id="quit" value="Quit" />
+            <p class="startSection">
+                <input type="button" class="btn start" name="start" id="start" value="Start Quiz!"> </p>
         </div>
-    </section>
+        <div class="hide" id="quizsection" class="quizsection">
+            <section id="scoreSection" class="hide">
+                <h2>Scores</h2>
+                <div class="scoreBlock">
+                    <p>
+                        <span id="right">0</span>
+                        <span>Correct</span>
+                    </p>
+                    <p>
+                        <span id="wrong">0</span>
+                        <span>Wrong</span>
+                    </p>
+                </div>
+            </section>
+            <section id="questions">
+                <div id="question">
+                </div>
+                <div>
+                    <input type="button" name="start" id="submitAnswer" value="Submit" />
+                    <input type="button" name="start" id="next" value="Next Question" />
+                    <input type="button" name="quit" id="quit" value="Quit" />
+                </div>
+            </section>
+        </div>
     </div>
     <footer>
-    <div>
-    <p>Author: Divya, W01167762 ,Santa Clara University</p>
-    </div>
+        <div>
+            <p>Author: Divya, W01167762 ,Santa Clara University</p>
+        </div>
     </footer>
     <script src="questions.js"></script>
     <script src="cookies.js"></script>
