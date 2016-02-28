@@ -14,8 +14,8 @@
         <h2>Online Assessment Tool</h2>
     </header>
     <div class="progresscontainer hide">
-        <div class="progress" id="timeColor" style="background-color: rgb(255, 248, 71);">
-            <span class="bar" id="timeProgress" style="width: 64.0384%;"></span>
+        <div class="progress" id="timeColor">
+            <span class="bar" id="timeProgress" style="width: 100%;"></span>
         </div>
     </div>
     <div class="main">
@@ -27,21 +27,23 @@
             <p class="startSection">
                 <input type="button" class="btn start" name="start" id="start" value="Start Quiz!"> </p>
         </div>
-        <div class="hide" id="quizsection" class="quizsection">
-            <section id="scoreSection" class="hide">
+        <div class="hide quizsection" id="quizsection">
+            <section id="scoreSection">
                 <h2>Scores</h2>
                 <div class="scoreBlock">
-                    <p class="right">
-                        <span>Correct</span>
+                    <span class="right">
+                        <span>Correct: </span>
                         <span id="right">0</span>
-                    </p>
-                    <p class="wrong">
-                        <span>Wrong</span>
+                    </span>
+                    <span id="time">
+                    </span>
+                    <span class="wrong">
+                        <span>Wrong: </span>
                          <span id="wrong">0</span>
-                    </p>
+                    </span>
                 </div>
             </section>
-            <section id="questions" class="questions">
+            <div id="questions" class="questions">
                 <div id="question" class="displayquestions">
                 </div>
                 <div class="buttonContainer">
@@ -49,7 +51,7 @@
                     <!-- <input type="button" name="start" id="next" value="Next Question" class="buttons"/> -->
                     <input type="button" name="quit" id="quit" value="Quit" class="buttons"/>
                 </div>
-            </section>
+            </div>
         </div>
     </div>
     <footer>

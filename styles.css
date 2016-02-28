@@ -173,17 +173,20 @@ footer{
 
 #scoreSection{
 	font-size: 12px;
-		border-bottom: solid #00695C;
-		clear: both;
+	border-bottom: solid #00695C;
+	clear: both;
+	padding: 10px 20px
 }
 .scoreBlock{
 	font-size: 25px;
+	text-align: center;	
 }
 .scoreBlock:after {
     display: block;
     content: ' ';
     clear: both;
 }
+
 
 .right{
 	display: inline-block;
@@ -193,7 +196,21 @@ footer{
 .wrong{
 	display: inline-block;
 	float: right;
+}
 
+#right, #wrong {
+	display: inline-block;
+    color: #fff;
+	border-radius: 5px;
+    padding: 2px 7px;
+}
+
+#right {
+	background: #01c37b;
+}
+
+#wrong {
+	background: #ff1200;
 }
 
 .displayquestions ul label:hover{
@@ -210,6 +227,7 @@ footer{
     font-size: 20px;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .buttons:hover{
@@ -218,5 +236,56 @@ footer{
 }
 
 .buttonContainer{
-	margin-top: 100px;
+	margin: 20px 0 0 10px;
+}
+
+
+/* mobiles Portrait and Landscape */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 640px) and (-webkit-min-device-pixel-ratio: 2) {
+	
+	body {
+		background-color: #fff;
+	}
+	.main {
+		max-width:100%;
+		background: #F1F8E9;
+		height: auto;
+	}
+
+	header {
+		border-bottom: 1px solid #ccc;
+	}
+
+	.intro{
+	    font-size: 10px;
+	}
+	.date{
+		font-size: 12px;
+	}
+	.displayquestions p input {
+	    width: 200px;	
+	}
+
+	.startSection {
+	    margin-top: 60px;
+	    text-align: left;
+	    margin-left: 45px;
+	}
+	.buttons{
+    width: 100px;
+    font-size: 13px;
+    margin-left: 2px;
+	}
+	.displayquestions ul label {
+    max-width: 200px;
+	}
+	.buttonContainer{
+		margin-top: 20px;
+	}
+	footer{
+		font-size: 10px;
+		bottom: 0px;
+	}
+
 }

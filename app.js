@@ -3,6 +3,8 @@ var askedQuestions = [];
 var currentQuestion;
 var correct = 0;
 var wrong = 0;
+var timer;
+var counter = 60;
 
 // get the current date and sisplays on the screen.
 function setDate() {
@@ -65,6 +67,7 @@ function setQuestion() {
     var question = pickQuestion();
     currentQuestion = question;
     generateQuestionHtml(question);
+    startTimer();
 }
 
 // dynamically generating the view based on the topic its picked.
@@ -99,20 +102,21 @@ function updateScores() {
 function checkAnswer() {
     var ans;
     var correctAns;
+    
     //  if the current Question is type 2 ,then get the value for the text box.
     if (currentQuestion.questionType === 2) {
-    	ans = $("input[name=answer]").val();
+        ans = $("input[name=answer]").val();
         correctAns = currentQuestion.correctAnswer;
     } else {
         // getting of the radio button thats checked.
 
-    	ans = $("input[name=answer]:checked").val();
+        ans = $("input[name=answer]:checked").val();
         correctAns = currentQuestion.correctChoice;
     }
 
 // checking correct answer along with the user answer.if is same , it increases the correct value.
 
-    if (ans && (ans.toLowerCase() === correctAns.toLowerCase())) {
+    if (ans && correctAns && (ans.toLowerCase() === correctAns.toLowerCase())) {
         correct += currentQuestion.score;
     } else {
         wrong += currentQuestion.score;
@@ -122,6 +126,30 @@ function checkAnswer() {
     setQuestion();
 }
 
+function updateProgress() {
+    var current = --counter;
+    $("#time").html("Time: " + counter + 's')
+    $("#timeProgress").width((current/60 * 100) + '%');
+    if(current === 0) {
+        clearTimer();
+    }
+}
+
+function startTimer() {
+    $(".progresscontainer").removeClass('hide');
+    timer = setInterval(updateProgress, 1000);
+}
+
+function clearTimer() {
+    if(timer){
+        clearInterval(timer);
+        counter = 60;
+        checkAnswer();
+        $("#timeProgress").width(100 + '%');
+    }
+}
+
+
 // calls the setDate and Settopic function.
 function init() {
     setDate();
@@ -130,7 +158,7 @@ function init() {
  
 $("#start").click(function(e) {
     setQuestion();
-    $("#start").addClass('hide');
+    $(".startSection").addClass('hide');
     $("#quizsection").removeClass('hide');
 });
 
@@ -144,7 +172,7 @@ $("#quit").click(function(e) {
      document.getElementById('#score').innerHTML = score;
 });
 
-$("#submitAnswer").click(checkAnswer);
+$("#submitAnswer").click(clearTimer);
 
 // on load of the window the init function is called.
 $(window).load(function() {
