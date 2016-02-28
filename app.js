@@ -72,7 +72,7 @@ function generateQuestionHtml(question) {
         var list = '<ul>'
 
         for (var i = 0; i < question.choices.length; i++) {
-            list += '<li><input type="radio" name="answer" value="' + question.choices[i] + '" /> ' + question.choices[i] + ' </li>'
+            list += '<li><input type="radio" name="answer" value="' + question.choices[i] + '" id="answer'+i+'"/> <label for="' + 'answer' +i+ '">' + question.choices[i] + '</label> </li>'
         }
 
         list += '</ul>';
@@ -105,7 +105,8 @@ function checkAnswer() {
     }
 
 // checking correct answer along with the user answer.if is same , it increases the correct value.
-    if (ans.toLowerCase() === correctAns.toLowerCase()) {
+
+    if (ans && (ans.toLowerCase() === correctAns.toLowerCase())) {
         correct += currentQuestion.score;
     } else {
         wrong += currentQuestion.score;
