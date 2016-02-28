@@ -38,7 +38,8 @@ function pickQuestion() {
     var subject = window[topic];
 
     if(askedQuestions.length == subject.length){
-         location.href='thankyou.html';
+         location.href = "thankyou.html?correct=" + correct + "&wrong=" + wrong;
+         document.getElementById('#score').innerHTML = score;
          return;
     }
   //checking the index Not to ask same question again in the instance
@@ -104,6 +105,7 @@ function checkAnswer() {
         correctAns = currentQuestion.correctAnswer;
     } else {
         // getting of the radio button thats checked.
+
     	ans = $("input[name=answer]:checked").val();
         correctAns = currentQuestion.correctChoice;
     }
@@ -138,7 +140,8 @@ $("#start").click(function(e) {
 // });
 
 $("#quit").click(function(e) {
-    location.href = "thankyou.html";
+    location.href = "thankyou.html?correct=" + correct + "&wrong=" + wrong;
+     document.getElementById('#score').innerHTML = score;
 });
 
 $("#submitAnswer").click(checkAnswer);
