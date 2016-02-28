@@ -32,9 +32,6 @@ section {
     display: none !important;
 }
 
-.show {
-	display: auto;
-}
 
 body{
 	background: #F1F8E9;
@@ -75,7 +72,6 @@ footer{
 	height: 20px;
 	font-size: 10px;
 	text-align: center;
-    display: auto;
 }
 
 .btn {
@@ -114,9 +110,6 @@ footer{
     display: block;
     height: 10px;
     width: 100%;
-    -webkit-transition: width 0.5s ease !important;
-    -moz-transition: width 0.5s ease !important;
-    -o-transition: width 0.5s ease !important;
     transition: width 0.5s ease !important;
 }
 
@@ -139,21 +132,34 @@ footer{
 
 .displayquestions ul{
 	list-style: none;
+	margin: 0;
+    padding: 10px;
 }
 
-.displayquestions ul li{
+.displayquestions ul li {
+	margin:0;
+	padding:0;
+}
+
+.displayquestions ul label{
 	background:#BDBDBD;
-	/*padding: 5px;*/
+	padding: 10px;
 	width: 500px;
-	margin-left: 30px;
+	margin: 0px;
 	margin-bottom: 15px;
 	border-radius: 5px;
-}
-.displayquestions ul li input{
-	visibility: hidden;
-	margin: 20px;
+	display: block;
+	cursor: pointer;
 }
 
+.displayquestions ul li input[type=radio]{
+	display: none;
+}
+
+.displayquestions input[type=radio]:checked + label {
+	background:#00695C;
+	color: #fff;
+}
 
 .displayquestions p input{
 	width: 300px;
@@ -161,6 +167,7 @@ footer{
 	border-radius: 5px;
 	height: 50px;
 	font-size: 15px;
+	border: 1px solid #ccc;
 }
 
 
@@ -189,7 +196,7 @@ footer{
 
 }
 
-.displayquestions ul li:hover{
+.displayquestions ul label:hover{
 	background:#00695C;
 	color: white;
 }
@@ -201,8 +208,8 @@ footer{
     width: 200px;
     color: white;
     font-size: 20px;
-    font-style: bold;
-    border-radius: 10px;
+    border: none;
+    border-radius: 5px;
 }
 
 .buttons:hover{
