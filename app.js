@@ -45,6 +45,7 @@ function pickQuestion() {
 // pushing the currently asked question index to array.
     askedQuestions.push(randomQuestion);
 
+
     //Reset to empty if all questions are asked
     if (askedQuestions.length === subject.length) {
         $("#next").addClass('hide');

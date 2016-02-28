@@ -136,3 +136,60 @@ footer{
 .displayquestions p{
 	margin: 10px;
 }
+
+.displayquestions ul{
+	list-style: none;
+}
+
+.displayquestions ul li{
+	background:#BDBDBD;
+	/*padding: 5px;*/
+	width: 500px;
+	margin-left: 30px;
+	margin-bottom: 15px;
+	border-radius: 5px;
+}
+.displayquestions ul li input{
+	visibility: hidden;
+	margin: 20px;
+}
+
+
+.displayquestions p input{
+	width: 300px;
+	margin: 20px 0px 50px 0px;
+	border-radius: 5px;
+	height: 50px;
+}
+
+
+
+/*.displayquestions ul li label{
+	padding:20px;
+	margin-bottom:20px;
+}*/
+
+.displayquestions ul li:hover{
+	background:#00695C;
+	color: white;
+}
+
+.buttons{
+    background: #26A69A;
+    height: 50px;
+    margin-right: 20px;
+    width: 200px;
+    color: white;
+    font-size: 20px;
+    font-style: bold;
+    border-radius: 10px;
+}
+
+.buttons:hover{
+		background:#00695C;
+		color: #E8F5E9;
+}
+
+.buttonContainer{
+	margin-top: 100px;
+}
