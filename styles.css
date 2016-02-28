@@ -163,11 +163,30 @@ footer{
 }
 
 
+#scoreSection{
+	font-size: 12px;
+		border-bottom: solid #00695C;
+		clear: both;
+}
+.scoreBlock{
+	font-size: 25px;
+}
+.scoreBlock:after {
+    display: block;
+    content: ' ';
+    clear: both;
+}
 
-/*.displayquestions ul li label{
-	padding:20px;
-	margin-bottom:20px;
-}*/
+.right{
+	display: inline-block;
+	float: left;
+}
+
+.wrong{
+	display: inline-block;
+	float: right;
+
+}
 
 .displayquestions ul li:hover{
 	background:#00695C;

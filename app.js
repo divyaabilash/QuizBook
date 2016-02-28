@@ -37,14 +37,17 @@ function pickQuestion() {
 // picking the subject dynamically
     var subject = window[topic];
 
-
-    //checking the index Not to ask same question again in the instance
+    if(askedQuestions.length == subject.length){
+         location.href='thankyou.html';
+         return;
+    }
+  //checking the index Not to ask same question again in the instance
     do {
         var randomQuestion = getRandom(subject.length);
     } while (askedQuestions.indexOf(randomQuestion) != -1)
 // pushing the currently asked question index to array.
     askedQuestions.push(randomQuestion);
-
+    // debugger;
 
     //Reset to empty if all questions are asked
     if (askedQuestions.length === subject.length) {
@@ -129,10 +132,10 @@ $("#start").click(function(e) {
     $("#quizsection").removeClass('hide');
 });
 
-$("#next").click(function(e) {
-    setQuestion();
-    checkAnswer();
-});
+// $("#next").click(function(e) {
+//     // setQuestion();
+//     checkAnswer();
+// });
 
 $("#quit").click(function(e) {
     location.href = "thankyou.html";
